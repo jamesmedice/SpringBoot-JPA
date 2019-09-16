@@ -1,7 +1,11 @@
 package com.medici.app.gtw.config;
 
-import com.medici.app.gtw.security.AuthoritiesConstants;
-import io.github.jhipster.config.JHipsterProperties;
+import java.security.KeyPair;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -31,10 +35,9 @@ import org.springframework.security.oauth2.provider.token.store.KeyStoreKeyFacto
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.filter.CorsFilter;
 
-import javax.servlet.http.HttpServletResponse;
-import java.security.KeyPair;
-import java.util.ArrayList;
-import java.util.Collection;
+import com.medici.app.gtw.security.AuthoritiesConstants;
+
+import io.github.jhipster.config.JHipsterProperties;
 
 @Configuration
 @EnableAuthorizationServer
@@ -159,22 +162,12 @@ public class UaaConfiguration extends AuthorizationServerConfigurerAdapter imple
     @Autowired
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
-
-    /**
-     * Apply the token converter (and enhancer) for token store.
-     * @return the JwtTokenStore managing the tokens.
-     */
+ 
     @Bean
     public JwtTokenStore tokenStore() {
         return new JwtTokenStore(jwtAccessTokenConverter());
     }
-
-    /**
-     * This bean generates an token enhancer, which manages the exchange between JWT acces tokens and Authentication
-     * in both directions.
-     *
-     * @return an access token converter configured with the authorization server's public/private keys
-     */
+ 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
