@@ -14,6 +14,6 @@ COPY --from=maven /app/app.jar ./app.jar
 
 
 # VOLUME /tmp  # optional
-EXPOSE 8181    # also optional
+# EXPOSE 8585    # also optional
 
 ENTRYPOINT ["java -jar","/app/app.jar"]
