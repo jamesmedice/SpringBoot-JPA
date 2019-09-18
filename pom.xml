@@ -6,7 +6,7 @@
 
 	<groupId>com.medici.app</groupId>
 	<artifactId>gateway</artifactId>
-	<version>0.0.1</version>
+	<version>1</version>
 	<packaging>jar</packaging>
 	<name>SpringBoot-gtw</name>
 
@@ -68,4 +68,13 @@
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>
