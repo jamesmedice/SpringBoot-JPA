@@ -17,13 +17,13 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.medici.app.spring.config.AuthoritiesConstants;
-import com.medici.app.spring.config.Constants;
 import com.medici.app.spring.model.Authority;
 import com.medici.app.spring.model.User;
 import com.medici.app.spring.repository.AuthorityRepository;
 import com.medici.app.spring.repository.UserRepository;
 import com.medici.app.spring.sevice.dto.UserDTO;
+import com.medici.app.spring.util.AuthoritiesConstants;
+import com.medici.app.spring.util.Constants;
 
 /**
  * Service class for managing users.

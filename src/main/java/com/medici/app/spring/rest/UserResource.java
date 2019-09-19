@@ -23,13 +23,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.medici.app.spring.config.Constants;
 import com.medici.app.spring.model.User;
 import com.medici.app.spring.repository.UserRepository;
 import com.medici.app.spring.rest.util.HeaderUtil;
 import com.medici.app.spring.rest.util.PaginationUtil;
 import com.medici.app.spring.sevice.UserService;
 import com.medici.app.spring.sevice.dto.UserDTO;
+import com.medici.app.spring.util.Constants;
 
 /**
  * REST controller for managing users.

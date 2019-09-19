@@ -1,4 +1,4 @@
-package com.medici.app.spring.config;
+package com.medici.app.spring.util;
 
 /**
  * Constants for Spring Security authorities.
