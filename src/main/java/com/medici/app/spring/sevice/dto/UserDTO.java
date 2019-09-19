@@ -9,9 +9,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import com.medici.app.spring.config.Constants;
 import com.medici.app.spring.model.Authority;
 import com.medici.app.spring.model.User;
+import com.medici.app.spring.util.Constants;
 
 /**
  * A DTO representing a user, with his authorities.
