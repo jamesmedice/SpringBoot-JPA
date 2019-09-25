@@ -7,4 +7,4 @@ RUN mvn clean install -Pdev -DskipTests
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
 COPY /target/*.jar  app.jar
-ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=dev", "-Djasypt.encryptor.password=encryptKeyCode", "/app.jar"]
+ENTRYPOINT ["java", "-jar", "-Dspring.profiles.active=dev", "-Djasypt.encryptor.password=KEYCODE", "/app.jar"]
