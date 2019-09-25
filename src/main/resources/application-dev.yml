@@ -7,7 +7,7 @@ spring:
         driver-class-name: com.mysql.jdbc.Driver
         url: jdbc:mysql://localhost:3306/MarketGateway
         username: root
-        password: ENC(dQZlmon0NhGwAbFKbSaP4Q==)
+        password: ENC(R3ws1K71XbM3T3IbqKEbcQ==)
     jpa:
         show-sql: true
         properties:
