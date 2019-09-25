@@ -4,6 +4,10 @@ COPY ./pom.xml ./pom.xml
 COPY ./src ./src
 RUN mvn clean install -Pdev -DskipTests
 
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=3306
+DATABASE_NAME=MarketGateway
+
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
 COPY /target/*.jar  app.jar

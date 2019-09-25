@@ -14,6 +14,9 @@ To start your application in the dev profile, simply run:
  
 ## DOCKER
 
+docker pull mysql
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=XXXXXX -d mysql:latest -p 3306:3306
+
 
 docker run -d -p 3306 --name mysql-docker-container -e MYSQL_ROOT_PASSWORD=tpm1234 -e MYSQL_DATABASE=MarketGateway mysql:latest
 

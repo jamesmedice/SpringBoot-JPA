@@ -23,7 +23,7 @@
 		<junit.version>4.12</junit.version>
 		<spring.test>5.1.8.RELEASE</spring.test>
 		<swagger2>2.9.2</swagger2>
-		<mysql>5.1.47</mysql>
+		<mysql>8.0.15</mysql>
 	</properties>
 
 
