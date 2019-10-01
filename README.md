@@ -22,3 +22,5 @@ docker run -d -p 3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=xxxx -e MYSQ
 docker run --name applicationBootName -d --link mysql-container:db -p 8585:8585  <image app id>
 
 
+** remove all containers
+docker rm `docker ps -aq`
