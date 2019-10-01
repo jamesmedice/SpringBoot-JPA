@@ -12,9 +12,13 @@ To start your application in the dev profile, simply run:
     ./mvn spring-boot:run -Dspring.profiles.active=dev -Djasypt.encryptor.password=encryptKeyCode
 
  
-## DOCKER
-## remova all containers
-docker rm `docker ps -aq`
+## DOCKER 
+
+**remove all images
+docker system prune -a --volumes 
+
+** remova all containers
+docker rm `docker ps -aq` 
 
 docker pull mysql 
  
