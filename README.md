@@ -18,7 +18,7 @@ docker rm `docker ps -aq`
 
 docker pull mysql
 
-docker run -d -p 3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=xxxx -e MYSQL_DATABASE=MarketGateway mysql:latest
+docker run -p 33306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=xxxx -e MYSQL_DATABASE=MarketGateway mysql:5.7
  
 
 docker run --name applicationBootName -d --link mysql-container:db -p 8585:8585  <image app id>
