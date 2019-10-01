@@ -1,6 +1,7 @@
+server:
+    port: 8585
+ 
 spring:
-    profiles:
-        active: dev
     jackson:
         serialization.indent_output: true
     datasource:
@@ -8,18 +9,13 @@ spring:
         url: jdbc:mysql://${DATABASE_HOST:127.0.0.1}:${DATABASE_PORT:3306}/${DATABASE_NAME:MarketGateway}?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false
         username: root
         password: ENC(R3ws1K71XbM3T3IbqKEbcQ==)
+        initialization-mode: always
+        schema: classpath:/schema.sql
     jpa:
+        hibernate:
+            ddl-auto: none
         show-sql: true
+        generate-ddl: false
         properties:
             hibernate:
                 dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-    redis:
-        host: "127.0.0.1"
-        port: 6379
-# ===================================================================
-# ===================================================================
-server:
-    port: 8585
-
-# ===================================================================
-# ===================================================================
