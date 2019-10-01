@@ -17,10 +17,13 @@ To start your application in the dev profile, simply run:
 docker rm `docker ps -aq`
 
 docker pull mysql
-
 docker run -p 33306:3306 --name mysql-container -e MYSQL_ROOT_PASSWORD=xxxx -e MYSQL_DATABASE=MarketGateway mysql:5.7
- 
 
-docker run --name applicationBootName -d --link mysql-container:db -p 8585:8585  <image app id>
+
+
+docker run -p 8585:8585  --name applicationgateway  --link mysql-container:db -e DATABASE_HOST=mysql-container -e DATABASE_PORT:3306 -e DATABASE_NAME=MarketGateway -e DATABASE_USER=root -e DATABASE_PASSWORD=xxxx  <image id>
+
+ 
+ 
 
 
