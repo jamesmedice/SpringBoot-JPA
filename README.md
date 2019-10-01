@@ -13,6 +13,8 @@ To start your application in the dev profile, simply run:
 
  
 ## DOCKER
+## remova all containers
+docker rm `docker ps -aq`
 
 docker pull mysql
 
