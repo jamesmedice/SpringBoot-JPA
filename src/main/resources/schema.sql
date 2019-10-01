@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS marketgateway;
+
+USE marketgateway;
+
 CREATE TABLE IF NOT EXISTS `marketgateway`.`databasechangelog` (
   `ID` VARCHAR(255) NOT NULL,
   `AUTHOR` VARCHAR(255) NOT NULL,
