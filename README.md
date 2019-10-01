@@ -29,3 +29,7 @@ docker run -p 8585:8585  --name applicationgateway  --link mysql-container:db -e
 
 ** remove all containers
 docker rm `docker ps -aq`
+
+
+## connect on docker to mysql
+docker exec -t mysql-container mysql -uroot -pXXXXXXX -D MarketGateway
