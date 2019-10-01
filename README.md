@@ -13,6 +13,8 @@ To start your application in the dev profile, simply run:
 
  
 ## DOCKER
+**remove all images
+docker system prune -a --volumes
 
 docker pull mysql
 
