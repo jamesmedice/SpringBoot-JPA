@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  mysql-container:
+    container_name: mysql-container
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${S_DATABASE_PASSWORD}
+      - MYSQL_DATABASE=${S_DATABASE_NAME}
+    ports:
+      - ${S_DATABASE_PORT_PROXY}:${S_DATABASE_PORT}
+  app:
+    container_name: appgateway
+    image: jamesmedice/gateway:latest
+    restart: always
+    depends_on:
+      - mysql-container
+    environment:
+      - DATABASE_HOST=${S_DATABASE_HOST}
+      - DATABASE_USER=${S_DATABASE_USER}
+      - DATABASE_PASSWORD=${S_DATABASE_PASSWORD}
+      - DATABASE_NAME=${S_DATABASE_NAME}
+      - DATABASE_PORT=${S_DATABASE_PORT}
+    ports:
+      - "8585:8585"
